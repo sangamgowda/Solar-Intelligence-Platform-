@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+sqlalchemy
+pandas
+numpy
+tensorflow
+scikit-learn
+joblib
+pvlib
+lightgbm
+openmeteo-requests
+requests-cache
+retry_requests
+python-dateutil

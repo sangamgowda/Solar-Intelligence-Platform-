@@ -1,0 +1,13 @@
+Code Quality Review: Solar Project Trichy
+======================================
+Status: Full-Stack Application / Multi-Service
+
+Core Reality:
+- Architecture: Modern and scalable. The separation of Vite/React (Frontend) and FastAPI (Backend) is the industry standard for web applications.
+- Deployment: Dockerization via docker-compose.yml indicates this project is designed for consistent deployment across different environments.
+- API Design: The FastAPI backend (main.py) is well-structured, utilizing distinct models and utility files.
+- Front-End: Use of Tailwind CSS and Vite ensures a fast, responsive, and maintainable UI.
+
+Potential Improvements:
+- Documentation: With multiple services (FE/BE), a central README in the root of the project folder would help new developers.
+- Testing: While there is a 'test_inference.py', adding unit tests for API endpoints would increase reliability.

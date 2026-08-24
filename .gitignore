@@ -1,0 +1,14 @@
+
+
+backend/venv/
+backend/__pycache__/
+backend/**/*.csv
+backend/**/*.pkl
+backend/**/*.h5
+backend/**/*.keras
+backend/**/*.pth
+backend/**/*.joblib
+backend/**/*.sqlite
+backend/**/*.db
+
+

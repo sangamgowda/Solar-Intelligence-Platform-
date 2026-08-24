@@ -1,0 +1,26 @@
+# Solar Prediction Application
+
+This guide explains how to set up and run the full-stack solar application effortlessly on any Windows device.
+
+## Quick Start (Windows)
+
+The project includes an automated script that handles everything behind the scenes—installing necessary software (Python, Node.js), setting up dependencies, and starting both the frontend and backend servers. You don't need to manually configure anything.
+
+1. Open the `Solar_project_trichy` folder.
+2. Double-click the **`RUN_PROJECT.bat`** file.
+3. Wait for the automated setup to complete. 
+
+Once started, two terminal windows will open, and the application will be available at:
+* **Frontend UI**: http://localhost:5173
+* **Backend API**: http://localhost:8000
+
+*(Note: During the very first run on a new machine, if you don't have Python or Node.js installed, the script will install them. If prompted in the terminal, simply type `Y` to accept the installation agreements).*
+
+## Docker Deployment (Optional / Advanced)
+
+If you prefer using Docker and have it installed, you can run the entire stack using Docker Compose from the project folder.
+
+```bash
+cd Solar_project_trichy
+docker-compose up --build
+```

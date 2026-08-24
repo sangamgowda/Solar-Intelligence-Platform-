@@ -1,0 +1,24 @@
+{
+  "features": [
+    "kt",
+    "solar_zenith",
+    "cos_zenith",
+    "cloud_cover",
+    "temperature",
+    "humidity",
+    "wind_speed",
+    "surface_pressure",
+    "clear_ghi",
+    "wind_direction",
+    "water_vapour",
+    "dni",
+    "dhi",
+    "hour_sin",
+    "hour_cos",
+    "day_sin",
+    "day_cos",
+    "ghi_clear_weighted"
+  ],
+  "seq_len": 48,
+  "horizon": 24
+}

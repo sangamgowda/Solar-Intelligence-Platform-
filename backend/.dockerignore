@@ -1,0 +1,18 @@
+# Dockerignore for Backend
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+instance/
+.pytest_cache/
+.coverage
+htmlcov/
+.DS_Store
+*.db
+backend/solar_prediction.db
