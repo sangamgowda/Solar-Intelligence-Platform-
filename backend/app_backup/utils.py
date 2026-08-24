@@ -27,7 +27,6 @@ def add_solar_features_ist(df, lat, lon, altitude=0, tz="Asia/Kolkata", tilt=12,
 
     df["day_sin"] = np.sin(2 * np.pi * df.index.dayofyear / 365.25)
     df["day_cos"] = np.cos(2 * np.pi * df.index.dayofyear / 365.25)
-
     clearsky = site.get_clearsky(df.index)
     df["clear_ghi"] = clearsky["ghi"]
 

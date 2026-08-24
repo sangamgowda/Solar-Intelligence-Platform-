@@ -12,3 +12,5 @@ openmeteo-requests
 requests-cache
 retry_requests
 python-dateutil
+pydantic-settings
+pydantic
