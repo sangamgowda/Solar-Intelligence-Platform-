@@ -7,7 +7,7 @@ class Settings(BaseSettings):
     PROJECT_START_DATE: datetime = datetime(2026, 1, 1)
     
     # Database Configuration
-    DB_PATH: str = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "Tirchy_DB_2_O.db")
+    DB_PATH: str = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "solar_prediction.db")
     SQLALCHEMY_DATABASE_URL: str = f"sqlite:///{DB_PATH}"
 
     # Weather API (if any, as fallback)

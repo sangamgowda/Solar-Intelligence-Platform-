@@ -13,6 +13,8 @@ def get_current_weather():
     try:
         df = fetch_weather_data(LAT, LON, date_str, date_str, use_archive=False)
         current_hour = now.hour
+        if current_hour >= len(df):
+            current_hour = len(df) - 1
         row = df.iloc[current_hour]
         return {
             "temperature": float(row["temperature"]),

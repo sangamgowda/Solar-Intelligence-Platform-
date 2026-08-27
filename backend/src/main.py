@@ -3,6 +3,7 @@ from datetime import datetime
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import inspect
+import threading
 
 from src.core.config import settings
 from src.db.session import SessionLocal, engine
@@ -23,6 +24,15 @@ def setup_db():
     
     Base.metadata.create_all(bind=engine)
 
+def run_backfill():
+    db = SessionLocal()
+    try:
+        backfill_data(db)
+    except Exception as e:
+        logging.error(f"Backfill failed: {e}")
+    finally:
+        db.close()
+
 app = FastAPI(title=settings.PROJECT_NAME)
 
 app.add_middleware(
@@ -38,11 +48,8 @@ app.include_router(api_router, prefix="/api/v1")
 @app.on_event("startup")
 def startup_event():
     setup_db()
-    db = SessionLocal()
-    try:
-        backfill_data(db)
-    finally:
-        db.close()
+    thread = threading.Thread(target=run_backfill, daemon=True)
+    thread.start()
 
 @app.get("/status")
 def get_status():
