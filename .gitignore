@@ -10,5 +10,6 @@ backend/**/*.pth
 backend/**/*.joblib
 backend/**/*.sqlite
 backend/**/*.db
-
-
+*__pycache__
+*node_modules
+*app_backup

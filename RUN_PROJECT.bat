@@ -34,7 +34,7 @@ echo.
 
 :: Start Backend
 echo Starting Backend API (FastAPI) in a new window...
-start "Sola Backend" cmd /k "cd backend && .\venv\Scripts\python.exe -m uvicorn app.main:app --reload --port 8000"
+start "Sola Backend" cmd /k "cd backend && .\venv\Scripts\python.exe -m uvicorn src.main:app --reload --port 8000"
 
 :: Start Frontend
 echo Starting Frontend (Vite) in a new window...
